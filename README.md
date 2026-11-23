@@ -1,25 +1,41 @@
 # Pugi MCP server
 
-Pugi is an AI product team that builds, checks and publishes websites from a brief. This is its hosted (remote) MCP server: connect any MCP client to it and sign in with your Pugi account. Nothing runs on your machine.
+Your AI product team: build websites and web apps, design logos, check security, publish.
+
+Pugi is an AI product team you can call from any MCP client (ChatGPT, Claude, Claude Code, Cursor and others). Describe a business or an idea in your own words and Pugi designs, writes and builds it: a website, or a web app with accounts, a database and payments. You see the progress and a live preview while it works, ask for changes in plain words, and publish it to its own pugi.app address when you are ready.
+
+- **Websites and web apps** from a brief, with real sections, photos and the owner's own facts; edits in plain words; one-step publishing.
+- **Logos and brand kits**: a short brand interview, four whole logo options, refinements, PNG files and a short brand book.
+- **Security checks**: grade a public website from A+ to F (HTTPS, security headers, exposed keys) and scan a public GitHub repository for leaked secrets, vulnerable dependencies and risky code.
+- **Your workspace in the chat**: open a project with its preview, code, design and security results without leaving the conversation (in clients that support MCP Apps).
+- **Catalogue**: search sites built with Pugi to start from.
+
+Sign in once with your Pugi account (OAuth). The client asks you before any step that builds, publishes or uses your plan. Free plan available.
+
+This is Pugi's hosted (remote) MCP server: connect any MCP client to it and sign in with your Pugi account. Nothing runs on your machine.
 
 - **URL:** `https://api.pugi.io/api/agent/v1/mcp`
 - **Transport:** Streamable HTTP
 - **Auth:** OAuth 2.1 with dynamic client registration. The first tool call opens a Pugi sign-in page; no API key to paste.
 
-## Tools
+## Tools (16)
 
 | Tool | What it does |
 |---|---|
 | `build_site` | Builds a website from a plain-language brief, with a live preview |
-| `job_status` | Follows a build and returns its preview and result |
-| `edit` | Changes a site Pugi built |
-| `publish` | Puts the site live on its own address |
+| `build_app` | Builds a web app: accounts, saved data, uploads, AI features, payments |
+| `edit` | Changes a site or app Pugi built, in plain words |
+| `job_status` | Follows a build or change and returns its preview and result |
+| `publish` | Puts the site or app live on its own pugi.app address |
 | `publish_status` | Lists your published sites and their addresses |
-| `make_logo` | Draws four whole logos for a business name |
+| `my_sites` | Finds a site or app you built earlier |
+| `open_project` | Opens a project with its preview, code, design and security results |
+| `make_logo` | Short brand interview, then four whole logo options |
+| `refine_logo` | Changes or redoes the logos shown (colours, style, layout) |
 | `select_logo` | Keeps the logo you chose and opens its brand kit |
-| `scan_url` | Passive security check of a public website, graded A+ to F |
+| `scan_url` | Security check of a public website, graded A+ to F |
 | `scan_repo` | Checks a public GitHub repository for leaked secrets, vulnerable dependencies and risky code |
-| `catalog_search` | Finds public sites and templates to start from |
+| `catalog_search` | Finds sites built with Pugi to start from |
 | `get_balance` | Shows your plan and remaining credit |
 | `buy_credits_link` | Gives a link a person can open to add credit |
 
@@ -61,7 +77,7 @@ Some clients name the type `http` instead of `streamableHttp`.
 - Agent guide: https://pugi.io/agents.md
 - Plans: https://pugi.io/pricing
 - Privacy: https://pugi.io/privacy · Terms: https://pugi.io/terms
-- Support: support@pugi.io
+- Support: https://pugi.io/support · support@pugi.io
 
 Also listed in the official MCP Registry as `io.pugi/pugi`.
 

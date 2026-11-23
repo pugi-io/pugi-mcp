@@ -12,7 +12,7 @@ Pugi is a hosted remote MCP server. There is nothing to clone, build or run loca
 }
 ```
 
-2. Save the settings. The server connects and lists 12 tools.
+2. Save the settings. The server connects and lists 16 tools.
 3. The first tool that needs an account opens a Pugi sign-in page in the browser (OAuth). The user signs in or creates a Pugi account there and clicks Allow. Do not ask the user for a password or token.
 4. Verify with a free read-only call: `scan_url` with `{"url": "https://example.com"}` returns a security grade.
 
