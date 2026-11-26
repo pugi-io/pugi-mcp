@@ -30,6 +30,7 @@ Check the client locally:
 ```sh
 npm test
 npm run typecheck
+npm run coverage
 ```
 
 ## Connect an MCP client
