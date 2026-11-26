@@ -41,6 +41,10 @@ This is Pugi's hosted (remote) MCP server: connect any MCP client to it and sign
 
 Every tool carries MCP annotations (read-only, destructive, idempotent, open-world).
 
+## Local GlitchTip connector
+
+This repository also contains a separate local, read-only connector for Pugi's GlitchTip instance. It uses stdio and your local credentials; it is not part of the hosted Pugi MCP service described above. See [`glitchtip-mcp/README.md`](glitchtip-mcp/README.md) for setup and client configuration.
+
 ## Connect
 
 **Claude Code**

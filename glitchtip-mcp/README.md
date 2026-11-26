@@ -4,9 +4,9 @@ A local, read-only MCP connector for the GlitchTip instance at `errors.pugi.dev`
 
 ## Requirements
 
-- Node.js 20 or newer
+- Node.js 20.6 or newer (the launcher uses Node's `--env-file` option)
 - Network access to `errors.pugi.dev`
-- A GlitchTip account and the Basic Auth credentials for the site
+- A GlitchTip account and the site's HTTP Basic Auth credentials
 
 ## Configure credentials
 
@@ -17,13 +17,23 @@ cp .env.example .env
 chmod 600 .env
 ```
 
-Fill in `GLITCHTIP_BASIC_AUTH_PASSWORD`, `GLITCHTIP_EMAIL`, and `GLITCHTIP_PASSWORD` in `.env`. Keep `.env` on the local machine; it is ignored by Git. The server holds its login session in memory and never writes credentials, cookies, or API responses to stderr. Issue and event details are returned to the MCP client when requested.
+In `.env`, set the site's `GLITCHTIP_BASIC_AUTH_USERNAME` and `GLITCHTIP_BASIC_AUTH_PASSWORD`, then the GlitchTip account's `GLITCHTIP_EMAIL` and `GLITCHTIP_PASSWORD`. The example username is `pugi`; change it if your Basic Auth username differs. Keep `.env` on the local machine; it is ignored by Git.
+
+The server holds its login session in memory. It does not write credentials, cookies, or API responses to stderr. Issue and event details are returned to the MCP client when requested. The login flow does not handle an MFA challenge.
 
 Install dependencies once:
 
 ```sh
-npm install
+npm ci
 ```
+
+Start the server locally to check that its configuration loads:
+
+```sh
+./run.sh
+```
+
+It prints a startup message to stderr and waits for an MCP client on stdin. Stop it with `Ctrl+C`.
 
 Check the client locally:
 
@@ -64,4 +74,4 @@ command = "/absolute/path/to/glitchtip-mcp/run.sh"
 - `get_issue`
 - `get_latest_event`
 
-All tools are read-only. The MCP server does not resolve issues, add comments, change settings, or create tokens.
+All tools are read-only. The MCP server does not resolve issues, add comments, change settings, or create tokens. If authentication fails, check both pairs of credentials and confirm that the account can sign in without an MFA challenge.
