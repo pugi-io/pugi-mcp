@@ -1,12 +1,14 @@
 # Pugi MCP server
 
-Your AI product team: build websites and web apps, design logos, check security, publish.
+Your AI product team: build websites and web apps, design logos, scan sites and repos for security issues, publish.
 
-Pugi is an AI product team you can call from any MCP client (ChatGPT, Claude, Claude Code, Cursor and others). Describe a business or an idea in your own words and Pugi designs, writes and builds it: a website, or a web app with accounts, a database and payments. You see the progress and a live preview while it works, ask for changes in plain words, and publish it to its own pugi.app address when you are ready.
+This is the official MCP server of [Pugi](https://pugi.io) (Pugi Inc.), listed in the official MCP Registry as `io.pugi/pugi`.
+
+Pugi is an AI product team you can call from any MCP client (Claude, Claude Code, Cursor, VS Code, Cline and others; Pugi is coming to the ChatGPT app directory). Describe a business or an idea in your own words and Pugi designs, writes and builds it: a website, or a web app with accounts, a database and payments. You see the progress and a live preview while it works, ask for changes in plain words, and publish it to its own pugi.app address when you are ready.
 
 - **Websites and web apps** from a brief, with real sections, photos and the owner's own facts; edits in plain words; one-step publishing.
 - **Logos and brand kits**: a short brand interview, four whole logo options, refinements, PNG files and a short brand book.
-- **Security checks**: grade a public website from A+ to F (HTTPS, security headers, exposed keys) and scan a public GitHub repository for leaked secrets, vulnerable dependencies and risky code.
+- **Security checks**: scans sites and repos for security issues. Grade a public website from A+ to F (HTTPS, security headers, exposed keys) and scan a public GitHub repository for leaked secrets, vulnerable dependencies and risky code.
 - **Your workspace in the chat**: open a project with its preview, code, design and security results without leaving the conversation (in clients that support MCP Apps).
 - **Catalogue**: search sites built with Pugi to start from.
 
@@ -74,12 +76,12 @@ Some clients name the type `http` instead of `streamableHttp`.
 ## Links
 
 - Site: https://pugi.io
+- Logo maker: https://logo.pugi.io
+- Official MCP Registry entry: https://registry.modelcontextprotocol.io/v0/servers/io.pugi%2Fpugi/versions/latest
 - Agent guide: https://pugi.io/agents.md
 - Plans: https://pugi.io/pricing
 - Privacy: https://pugi.io/privacy · Terms: https://pugi.io/terms
 - Support: https://pugi.io/support · support@pugi.io
-
-Also listed in the official MCP Registry as `io.pugi/pugi`.
 
 ## License
 
